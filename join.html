@@ -6,212 +6,69 @@
   <title>সোনালী অতীত ক্লাব | সদস্যতা</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* ========== Base Styles ========== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: radial-gradient(circle at top, #111, #000); color: #fff; overflow-x: hidden; }
+    header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #000, #2c2c2c); box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); border-bottom: 2px solid gold; }
+    header img { width: 100px; border-radius: 50%; border: 3px solid gold; margin-bottom: 10px; }
+    header h1 { font-size: 2rem; color: gold; text-shadow: 0 0 15px gold; }
+    header p { font-size: 1rem; color: #ccc; margin-top: 5px; }
 
-    body {
-      background: radial-gradient(circle at top, #111, #000);
-      color: #fff;
-      overflow-x: hidden;
-    }
+    .join-container { display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 60px 20px; }
+    .join-box { background: rgba(0, 0, 0, 0.85); padding: 40px 30px; border: 2px solid gold; border-radius: 20px; width: 100%; max-width: 600px; box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); animation: glowBox 4s infinite alternate; }
+    @keyframes glowBox { from { box-shadow: 0 0 20px gold; } to { box-shadow: 0 0 50px #ffcc33; } }
+    .join-box h2 { color: gold; text-align: center; margin-bottom: 20px; text-shadow: 0 0 10px gold; }
+    .join-box label { display: block; margin-top: 15px; color: #fff; font-weight: 500; }
+    .join-box input, .join-box textarea, .join-box select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid gold; border-radius: 10px; background: #111; color: #fff; outline: none; }
+    .join-box button { margin-top: 25px; width: 100%; padding: 12px; border: none; background: gold; color: #000; font-weight: bold; font-size: 1rem; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+    .join-box button:hover { background: #ffcc33; transform: scale(1.05); }
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #000, #2c2c2c);
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-      border-bottom: 2px solid gold;
-    }
+    .thankyou-section { display: none; background: linear-gradient(135deg, #111, #2c2c2c); padding: 60px 20px; text-align: center; position: relative; overflow: hidden; box-shadow: inset 0 0 50px rgba(255, 215, 0, 0.2); transition: opacity 1s ease; }
+    .thankyou-box { background: rgba(0, 0, 0, 0.8); border: 2px solid gold; border-radius: 20px; display: inline-block; padding: 40px 30px; max-width: 600px; color: #fff; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); animation: glow 3s infinite alternate; }
+    @keyframes glow { from { box-shadow: 0 0 15px gold; } to { box-shadow: 0 0 40px #ffcc33; } }
+    .thankyou-logo { width: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid gold; }
+    .thankyou-box h2 { font-size: 2rem; color: gold; margin-bottom: 10px; }
+    .thankyou-box p { font-size: 1.1rem; line-height: 1.6; }
 
-    header img {
-      width: 100px;
-      border-radius: 50%;
-      border: 3px solid gold;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      color: gold;
-      text-shadow: 0 0 15px gold;
-    }
-
-    header p {
-      font-size: 1rem;
-      color: #ccc;
-      margin-top: 5px;
-    }
-
-    /* ========== Join Form ========== */
-    .join-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 60px 20px;
-    }
-
-    .join-box {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 40px 30px;
-      border: 2px solid gold;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
-      animation: glowBox 4s infinite alternate;
-    }
-
-    @keyframes glowBox {
-      from { box-shadow: 0 0 20px gold; }
-      to { box-shadow: 0 0 50px #ffcc33; }
-    }
-
-    .join-box h2 {
-      color: gold;
-      text-align: center;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px gold;
-    }
-
-    .join-box label {
-      display: block;
-      margin-top: 15px;
-      color: #fff;
-      font-weight: 500;
-    }
-
-    .join-box input,
-    .join-box textarea,
-    .join-box select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid gold;
-      border-radius: 10px;
-      background: #111;
-      color: #fff;
-      outline: none;
-    }
-
-    .join-box button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 12px;
-      border: none;
-      background: gold;
-      color: #000;
-      font-weight: bold;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .join-box button:hover {
-      background: #ffcc33;
-      transform: scale(1.05);
-    }
-
-    /* ========== Thank You Section ========== */
-    .thankyou-section {
-      background: linear-gradient(135deg, #111, #2c2c2c);
-      padding: 60px 20px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: inset 0 0 50px rgba(255, 215, 0, 0.2);
-    }
-
-    .thankyou-box {
-      background: rgba(0, 0, 0, 0.8);
-      border: 2px solid gold;
-      border-radius: 20px;
-      display: inline-block;
-      padding: 40px 30px;
-      max-width: 600px;
-      color: #fff;
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-      animation: glow 3s infinite alternate;
-    }
-
-    @keyframes glow {
-      from { box-shadow: 0 0 15px gold; }
-      to { box-shadow: 0 0 40px #ffcc33; }
-    }
-
-    .thankyou-logo {
-      width: 100px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      border: 3px solid gold;
-    }
-
-    .thankyou-box h2 {
-      font-size: 2rem;
-      color: gold;
-      margin-bottom: 10px;
-    }
-
-    .thankyou-box p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #999;
-      border-top: 1px solid gold;
-    }
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #999; border-top: 1px solid gold; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg" alt="Club Logo">
     <h1>সোনালী অতীত ক্লাব</h1>
     <p>ক্রীড়াগণ গড়ে তোলে সুস্থ দেহ, সুন্দর মন</p>
   </header>
 
-  <!-- Join Form Section -->
   <section class="join-container">
     <div class="join-box">
       <h2><i class="fa-solid fa-user-plus"></i> সদস্য হোন</h2>
-      <form action="#">
+      <form id="joinForm">
         <label>নাম:</label>
-        <input type="text" placeholder="আপনার নাম লিখুন">
+        <input type="text" name="name" placeholder="আপনার নাম লিখুন" required>
 
         <label>বয়স:</label>
-        <input type="number" placeholder="আপনার বয়স লিখুন">
+        <input type="number" name="age" placeholder="আপনার বয়স লিখুন" required>
 
         <label>খেলার ধরন:</label>
-        <select>
+        <select name="game">
           <option>ফুটবল</option>
           <option>ক্রিকেট</option>
           <option>দুইটিই</option>
         </select>
 
         <label>ঠিকানা:</label>
-        <textarea rows="3" placeholder="আপনার ঠিকানা লিখুন"></textarea>
+        <textarea name="address" rows="3" placeholder="আপনার ঠিকানা লিখুন"></textarea>
 
         <label>মোবাইল নম্বর:</label>
-        <input type="tel" placeholder="০১xxxxxxxxx">
+        <input type="tel" name="phone" placeholder="০১xxxxxxxxx" required>
 
         <button type="submit">সদস্য হিসেবে যুক্ত হোন</button>
       </form>
     </div>
   </section>
 
-  <!-- Thank You Section -->
-  <section class="thankyou-section">
+  <section class="thankyou-section" id="thankyou">
     <div class="thankyou-box">
       <img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg" alt="Club Logo" class="thankyou-logo">
       <h2>ধন্যবাদ!</h2>
@@ -220,10 +77,47 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    © 2025 সোনালী অতীত ক্লাব | সর্বস্বত্ব সংরক্ষিত
+    ©️ 2025 সোনালী অতীত ক্লাব | সর্বস্বত্ব সংরক্ষিত
   </footer>
+
+  <script>
+    document.getElementById("joinForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const formData = {
+        name: this.name.value,
+        age: this.age.value,
+        game: this.game.value,
+        address: this.address.value,
+        phone: this.phone.value
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbzZd7agGpZVQzouOcJ5MohUjTPfxL8MZz99O-lS22WVlP-9e44qZzugm-IWTclqD9PwkA/exec", {
+        method: "POST",
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        // ফর্ম ক্লিয়ার
+        this.reset();
+        // Join Form লুকানো, Thank You দেখানো
+        document.querySelector(".join-container").style.display = "none";
+        const thankYou = document.getElementById("thankyou");
+        thankYou.style.display = "block";
+        thankYou.style.opacity = "1";
+
+        // 5 সেকেন্ড পরে fade out
+        setTimeout(() => {
+          thankYou.style.transition = "opacity 1s ease";
+          thankYou.style.opacity = "0";
+          setTimeout(() => { thankYou.style.display = "none"; }, 1000);
+          // Form আবার দেখানো
+          document.querySelector(".join-container").style.display = "flex";
+        }, 5000);
+      })
+      .catch(error => alert("❌ কিছু সমস্যা হয়েছে, আবার চেষ্টা করুন।"));
+    });
+  </script>
 
 </body>
 </html>
