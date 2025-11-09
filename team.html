@@ -1,204 +1,272 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>সোনালী অতীত ক্লাব | আমাদের টিম</title>
-
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+<title>সোনালী অতীত ক্লাব</title>
 <style>
+/* ---------- BASIC RESET ---------- */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #001f3f, #000);
-  color: white;
+  background: #000;
+  color: #fff;
   overflow-x: hidden;
 }
 
-/* glowing animated background */
-@keyframes moveGlow {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
-.team-section {
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(90deg, #000, #111, #000);
+  color: gold;
   text-align: center;
-  padding: 100px 20px;
+  padding: 70px 20px;
   position: relative;
-  background: linear-gradient(270deg, #0b132b, #1c2541, #3a506b, #0b132b);
-  background-size: 400% 400%;
-  animation: moveGlow 12s ease infinite;
+  overflow: hidden;
 }
-
-.team-section::before {
+header::before {
   content: "";
   background: url('https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg') center/180px no-repeat;
-  opacity: 0.06;
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 0;
+  opacity: 0.05;
+  position: absolute; inset: 0;
 }
-
-.team-section h1 {
-  font-size: 3.2rem;
-  color: gold;
-  margin-bottom: 8px;
-  position: relative;
-  z-index: 2;
-  text-shadow: 0 0 15px gold;
+header h1 {
+  font-size: 3.5rem;
+  text-shadow: 0 0 30px rgba(255,215,0,0.8);
 }
-
-.team-section p {
+header p {
   font-size: 1.2rem;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+}
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px gold;
+}
+
+/* ---------- HERO / HOME ---------- */
+.hero {
+  background: radial-gradient(circle at center, rgba(255,215,0,0.05), #000);
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero img {
+  width: 180px;
+  border-radius: 50%;
+  border: 3px solid gold;
+  box-shadow: 0 0 25px rgba(255,215,0,0.4);
+}
+.hero h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: gold;
+}
+.hero p {
   color: #ccc;
-  position: relative;
-  z-index: 2;
+  margin-top: 10px;
+}
+
+/* ---------- PRESIDENT & VP SECTION ---------- */
+.leadership {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(145deg, #050505, #111);
+}
+.leadership h1 {
+  color: gold;
+  font-size: 2.8rem;
   margin-bottom: 50px;
+  text-shadow: 0 0 25px gold;
 }
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 35px;
-  position: relative;
-  z-index: 2;
+.leader-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
-
-/* Card */
-.team-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 215, 0, 0.3);
+.leader-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,215,0,0.3);
   border-radius: 25px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
-  transition: all 0.5s ease;
+  width: 260px;
   overflow: hidden;
-  position: relative;
+  transition: 0.4s;
+  box-shadow: 0 0 25px rgba(255,215,0,0.15);
 }
-
-.team-card::after {
-  content: "";
-  position: absolute;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: conic-gradient(from 0deg, transparent, gold, transparent 30%);
-  animation: rotateLight 5s linear infinite;
-  opacity: 0.2;
-}
-
-@keyframes rotateLight {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-}
-
-.team-card:hover {
+.leader-card:hover {
   transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 45px rgba(255,215,0,0.4);
 }
-
-.team-card img {
+.leader-card img {
   width: 100%;
-  height: 250px;
+  height: 260px;
   object-fit: cover;
   border-bottom: 2px solid gold;
 }
-
-.team-card h2 {
-  font-size: 1.5rem;
+.leader-card h2 {
+  margin: 10px 0 5px;
   color: gold;
-  margin: 15px 0 5px;
 }
-
-.team-card h4 {
+.leader-card h4 {
   color: #ccc;
-  font-weight: 400;
   margin-bottom: 15px;
 }
 
-.social-icons {
-  margin-bottom: 18px;
+/* ---------- ADVISORY PANEL SECTION ---------- */
+.advisory-section {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle at center, #111, #000);
+  position: relative;
+  overflow: hidden;
+}
+.advisory-section::before {
+  content: "";
+  background: url('https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg') center/250px no-repeat;
+  opacity: 0.05;
+  position: absolute;
+  inset: 0;
+}
+.advisory-section h1 {
+  font-size: 3rem;
+  color: #ffd700;
+  text-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+  margin-bottom: 10px;
+}
+.advisory-section p {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+}
+.advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+}
+.advisory-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+.advisory-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.45);
+}
+.advisory-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom: 2px solid gold;
+}
+.advisory-card h2 {
+  color: gold;
+  margin: 15px 0 5px;
+}
+.advisory-card h4 {
+  color: #ccc;
+  margin-bottom: 20px;
 }
 
-.social-icons a {
-  color: gold;
-  margin: 0 8px;
-  font-size: 20px;
-  transition: 0.3s;
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #000;
+  color: #aaa;
+  border-top: 1px solid rgba(255,215,0,0.3);
 }
-.social-icons a:hover {
-  color: white;
-  text-shadow: 0 0 8px gold;
-}
+footer p { color: #ccc; }
 </style>
 </head>
 <body>
 
-<section class="team-section">
-  <h1>আমাদের টিম</h1>
-  <p>সোনালী অতীত ক্লাব – ঐক্য, ক্রীড়া ও বন্ধুত্বের প্রতীক ⚽</p>
+<header>
+  <h1>সোনালী অতীত ক্লাব</h1>
+  <p>ক্রীড়াগণ – সুস্থ দেহ, সুন্দর মন গড়ে তুলে</p>
+</header>
 
-  <div class="team-grid" id="teamGrid"></div>
+<nav>
+  <a href="#home">হোম</a>
+  <a href="#leadership">নেতৃত্ব</a>
+  <a href="#advisory">উপদেষ্টা</a>
+  <a href="#team">টিম</a>
+  <a href="#contact">যোগাযোগ</a>
+</nav>
+
+<section class="hero" id="home">
+  <img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg" alt="Logo">
+  <h2>Sonali Otit Club</h2>
+  <p>একটি অনন্য ক্রীড়া পরিবার যেখানে ঐক্য, দক্ষতা এবং ভালোবাসাই শক্তি ⚽</p>
 </section>
 
-<script>
-const teamMembers = [
-  {
-    name: "ইমরান হোসাইন মাহি",
-    role: "সভাপতি",
-    img: "https://i.ibb.co/SK9Q9Z5/president.jpg",
-    fb: "#",
-    ig: "#"
-  },
-  {
-    name: "আরিফুল ইসলাম",
-    role: "সহ সভাপতি",
-    img: "https://i.ibb.co/XLGHMBY/vicepresident.jpg",
-    fb: "#",
-    ig: "#"
-  },
-  {
-    name: "রুবেল আহমেদ",
-    role: "সদস্য",
-    img: "https://i.ibb.co/2PMkqDp/member1.jpg",
-    fb: "#",
-    ig: "#"
-  },
-  {
-    name: "মাহমুদ হাসান",
-    role: "সদস্য",
-    img: "https://i.ibb.co/h8P8MWC/member2.jpg",
-    fb: "#",
-    ig: "#"
-  },
-  {
-    name: "সাজিদ হোসাইন",
-    role: "খেলোয়াড়",
-    img: "https://i.ibb.co/2YN93zr/player.jpg",
-    fb: "#",
-    ig: "#"
-  }
-];
-
-// Card Generate Function
-const grid = document.getElementById("teamGrid");
-teamMembers.forEach(member => {
-  const card = document.createElement("div");
-  card.classList.add("team-card");
-  card.innerHTML = `
-    <img src="${member.img}" alt="${member.name}">
-    <h2>${member.name}</h2>
-    <h4>${member.role}</h4>
-    <div class="social-icons">
-      <a href="${member.fb}"><i class="fab fa-facebook"></i></a>
-      <a href="${member.ig}"><i class="fab fa-instagram"></i></a>
+<section class="leadership" id="leadership">
+  <h1>নেতৃত্ব পরিষদ</h1>
+  <div class="leader-grid">
+    <div class="leader-card">
+      <img src="https://i.ibb.co/6D1B3yw/president.jpg" alt="President">
+      <h2>মোহাম্মদ ইমরান হোসাইন মাহি</h2>
+      <h4>সভাপতি</h4>
     </div>
-  `;
-  grid.appendChild(card);
-});
-</script>
+    <div class="leader-card">
+      <img src="https://i.ibb.co/7G7PhTt/vicepresident.jpg" alt="Vice President">
+      <h2>মোঃ আরিফুল ইসলাম</h2>
+      <h4>সহ-সভাপতি</h4>
+    </div>
+  </div>
+</section>
+
+<section class="advisory-section" id="advisory">
+  <h1>উপদেষ্টা পরিষদ</h1>
+  <p>যাদের প্রজ্ঞা ও অভিজ্ঞতায় সোনালী অতীত ক্লাব এগিয়ে চলেছে ✨</p>
+
+  <div class="advisory-grid">
+    <div class="advisory-card">
+      <img src="https://i.ibb.co/2vvjqJd/advisor1.jpg" alt="">
+      <h2>মোহাম্মদ রফিকুল ইসলাম</h2>
+      <h4>প্রধান উপদেষ্টা</h4>
+    </div>
+    <div class="advisory-card">
+      <img src="https://i.ibb.co/5T5Ck9M/advisor2.jpg" alt="">
+      <h2>আবদুল কাদের</h2>
+      <h4>উপদেষ্টা</h4>
+    </div>
+    <div class="advisory-card">
+      <img src="https://i.ibb.co/mDc7xxd/advisor3.jpg" alt="">
+      <h2>জাকির হোসেন</h2>
+      <h4>উপদেষ্টা</h4>
+    </div>
+    <div class="advisory-card">
+      <img src="https://i.ibb.co/1sLcb7C/advisor4.jpg" alt="">
+      <h2>মোঃ হাফিজ উদ্দিন</h2>
+      <h4>সিনিয়র উপদেষ্টা</h4>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 সোনালী অতীত ক্লাব | সর্বস্বত্ব সংরক্ষিত</p>
+</footer>
 
 </body>
 </html>
