@@ -5,36 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>সোনালী অতীত ক্লাব</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
-body{background:#000;color:#fff;overflow-x:hidden}
-header{background:linear-gradient(90deg,#000,#111,#000);color:gold;text-align:center;padding:70px 20px;position:relative;overflow:hidden}
-header::before{content:"";background:url('https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg')center/180px no-repeat;opacity:0.05;position:absolute;inset:0}
-header h1{font-size:3rem;text-shadow:0 0 25px rgba(255,215,0,0.8)}
-header p{font-size:1.2rem;color:#ddd;margin-top:10px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+body{background:#000;color:#fff;}
+header{background:linear-gradient(90deg,#000,#111,#000);color:gold;text-align:center;padding:70px 20px;position:relative;overflow:hidden;}
+header::before{content:"";background:url('https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg')center/180px no-repeat;opacity:0.05;position:absolute;inset:0;}
+header h1{font-size:3rem;text-shadow:0 0 25px rgba(255,215,0,0.8);}
+header p{font-size:1.2rem;color:#ddd;margin-top:10px;}
 
-.leadership{padding:80px 20px;text-align:center;background:radial-gradient(circle at center,#111,#000)}
-.leadership h1{color:gold;font-size:2.8rem;margin-bottom:50px;text-shadow:0 0 25px gold}
+.leadership{padding:80px 20px;text-align:center;background:radial-gradient(circle at center,#111,#000);}
+.leadership h1{color:gold;font-size:2.8rem;margin-bottom:50px;text-shadow:0 0 25px gold;}
 
-/* সভাপতি ও সহ-সভাপতি */
-.president-row{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;margin-bottom:70px}
-.president-card{background:linear-gradient(145deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));border:1px solid rgba(255,215,0,0.3);border-radius:25px;width:320px;overflow:hidden;transition:.4s;box-shadow:0 0 25px rgba(255,215,0,0.15)}
-.president-card:hover{transform:translateY(-10px)scale(1.03);box-shadow:0 0 40px rgba(255,215,0,0.4)}
-.president-card img{width:100%;height:280px;object-fit:cover;border-bottom:2px solid gold}
-.president-card h2{color:gold;margin:10px 0 5px}
-.president-card h4{color:#ccc;margin-bottom:15px}
+.president-row{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;margin-bottom:70px;}
+.president-card{background:linear-gradient(145deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));border:1px solid rgba(255,215,0,0.3);border-radius:25px;width:320px;overflow:hidden;transition:.4s;box-shadow:0 0 25px rgba(255,215,0,0.15);}
+.president-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 0 40px rgba(255,215,0,0.4);}
+.president-card img{width:100%;height:280px;object-fit:cover;border-bottom:2px solid gold;}
+.president-card h2{color:gold;margin:10px 0 5px;}
+.president-card h4{color:#ccc;margin-bottom:15px;}
 
-/* সদস্যদের গ্রিড */
-.member-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;justify-items:center}
-.member-card{background:linear-gradient(145deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,215,0,0.2);border-radius:20px;width:220px;overflow:hidden;transition:.3s;box-shadow:0 0 15px rgba(255,215,0,0.1)}
-.member-card:hover{transform:translateY(-6px)scale(1.04);box-shadow:0 0 25px rgba(255,215,0,0.3)}
-.member-card img{width:100%;height:180px;object-fit:cover;border-bottom:1px solid gold}
-.member-card h4{text-align:center;color:gold;margin:8px 0 15px}
+/* সদস্যদের ৪ কলাম গ্রিড */
+.member-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+  justify-items:center;
+}
+.member-card{
+  background:linear-gradient(145deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));
+  border:1px solid rgba(255,215,0,0.2);
+  border-radius:20px;
+  width:220px;
+  overflow:hidden;
+  transition:.3s;
+  box-shadow:0 0 15px rgba(255,215,0,0.1);
+}
+.member-card:hover{transform:translateY(-6px) scale(1.04);box-shadow:0 0 25px rgba(255,215,0,0.3);}
+.member-card img{width:100%;height:180px;object-fit:cover;border-bottom:1px solid gold;}
+.member-card h4{text-align:center;color:gold;margin:8px 0 15px;}
 
-footer{text-align:center;padding:40px;background:#000;color:#aaa;border-top:1px solid rgba(255,215,0,0.3)}
+footer{text-align:center;padding:40px;background:#000;color:#aaa;border-top:1px solid rgba(255,215,0,0.3);}
 
-@media(max-width:1200px){.member-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:900px){.member-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.member-grid{grid-template-columns:1fr}}
+@media(max-width:1200px){.member-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:900px){.member-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.member-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -46,7 +58,6 @@ footer{text-align:center;padding:40px;background:#000;color:#aaa;border-top:1px 
 
 <section class="leadership">
   <h1>নেতৃত্ব পরিষদ</h1>
-  
   <div class="president-row">
     <div class="president-card">
       <img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg" alt="President">
@@ -62,57 +73,8 @@ footer{text-align:center;padding:40px;background:#000;color:#aaa;border-top:1px 
 
   <h1>সদস্যবৃন্দ</h1>
   <div class="member-grid">
-    <!-- প্রথম ২০ সদস্যের উদাহরণ -->
-
+<!-- ১ থেকে ১৫০ -->
 <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৪</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৫</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৬</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৭</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৮</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৯</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১০</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১১</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১২</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১৩</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১৪</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১৫</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১৬</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১৭</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১৮</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ১৯</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২০</h4></div>
-
-<!-- Member Cards 21-150 -->
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২১</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২২</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২৩</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২৪</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২৫</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২৬</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২৭</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২৮</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২৯</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩০</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩১</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩২</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩৩</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩৪</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩৫</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩৬</h4></div>
-
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩৭</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩৮</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩৯</h4></div>
-    <div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৪০</h4></div>
-
-    <!-- Repeat same pattern, increasing numbers, 41-150 -->
+<div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ২</h4></div>
+<div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৩</h4></div>
+<div class="member-card"><img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg"><h4>সদস্য ৪</h4></div>
