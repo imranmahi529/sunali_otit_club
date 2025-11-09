@@ -6,184 +6,140 @@
 <title>সোনালী অতীত ক্লাব — নতুন কমিটি ২০২৫</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #ffd24d;
-    --dark: #0b0e12;
-    --glass: rgba(255, 255, 255, 0.05);
-    --border: rgba(255, 255, 255, 0.1);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: radial-gradient(circle at top, #0a0a0a 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: #f0f0f0;
     font-family: "Noto Sans Bengali", sans-serif;
-    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
   }
+
   header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px 20px;
+    background: radial-gradient(circle at center, #222, #000);
+    box-shadow: 0 0 30px rgba(255,210,77,0.2);
   }
-  header img {
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px rgba(255, 210, 77, 0.3);
-  }
+
   header h1 {
-    margin-top: 10px;
-    color: var(--gold);
-    font-size: 28px;
+    color: #ffd24d;
+    font-size: 34px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
   }
+
   header p {
-    color: rgba(255,255,255,0.7);
-    font-size: 14px;
-  }
-
-  .committee-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 15px 80px;
-  }
-
-  .section-title {
-    font-size: 22px;
-    color: var(--gold);
-    text-align: center;
-    margin-bottom: 25px;
-    position: relative;
-  }
-  .section-title::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: var(--gold);
-    margin: 10px auto 0;
-    border-radius: 2px;
-  }
-
-  /* PRESIDENT AREA */
-  .president-area {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-  }
-  .pres-card {
-    background: var(--glass);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(255,255,255,0.08);
-    transition: transform 0.3s;
-  }
-  .pres-card:hover { transform: translateY(-10px) scale(1.03); }
-  .pres-card img {
-    width: 100%;
-    height: 280px;
-    border-radius: 14px;
-    object-fit: cover;
-    border: 2px solid rgba(255,255,255,0.1);
-  }
-  .pres-card h3 {
-    margin: 10px 0 4px;
-    color: var(--gold);
-  }
-  .pres-card p {
     color: rgba(255,255,255,0.8);
+    font-size: 16px;
   }
 
-  /* MEMBER GRID */
-  .member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+  .committee-box {
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255,210,77,0.1);
+    padding: 35px 30px;
   }
-  .member-card {
-    background: var(--glass);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px;
+
+  .committee-box h2 {
     text-align: center;
-    transition: transform 0.25s, box-shadow 0.25s;
+    color: #ffd24d;
+    margin-bottom: 25px;
+    font-size: 22px;
+    text-shadow: 0 0 10px rgba(255,210,77,0.3);
   }
-  .member-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(255,210,77,0.25);
+
+  .member-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  .member-card img {
-    width: 100%;
-    height: 180px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  .member-card h4 {
-    margin: 8px 0 2px;
-    color: var(--gold);
+
+  .member-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 0;
     font-size: 15px;
+    transition: 0.3s ease;
   }
-  .member-card p {
-    color: rgba(255,255,255,0.7);
-    font-size: 13px;
+
+  .member-list li:hover {
+    background: rgba(255,255,255,0.05);
+    transform: scale(1.01);
+  }
+
+  .member-list li span {
+    color: #ffd24d;
+    min-width: 30px;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  .leader {
+    background: rgba(255,215,0,0.1);
+    border-left: 4px solid #ffd24d;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255,215,0,0.2);
+  }
+
+  .executive {
+    background: rgba(192,192,192,0.08);
+    border-left: 3px solid silver;
+    box-shadow: 0 0 6px rgba(192,192,192,0.1);
   }
 
   footer {
     text-align: center;
-    padding: 25px;
     color: rgba(255,255,255,0.6);
     font-size: 13px;
+    padding: 30px 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg" alt="logo">
   <h1>সোনালী অতীত ক্লাব</h1>
-  <p>নতুন কমিটি (২০২৫) — সুস্থ দেহ, সুন্দর মন গড়ে তুলে ক্রীড়াগণ</p>
+  <p>নতুন কমিটি ২০২৫ — দায়িত্বশীল ও সদস্য তালিকা</p>
 </header>
 
-<div class="committee-container">
-
-  <h2 class="section-title">সভাপতি ও সহ-সভাপতি</h2>
-  <div class="president-area">
-    <div class="pres-card">
-      <img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg" alt="সভাপতি">
-      <h3>ইমরান হোসাইন মাহি</h3>
-      <p>সভাপতি<br>📞 01710000001</p>
-    </div>
-    <div class="pres-card">
-      <img src="https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg" alt="সহ সভাপতি">
-      <h3>আরিফুল ইসলাম</h3>
-      <p>সহ সভাপতি<br>📞 01710000002</p>
-    </div>
-  </div>
-
-  <h2 class="section-title">নতুন কমিটি সদস্য (মোট ১০০ জন)</h2>
-  <div class="member-grid" id="committeeGrid"></div>
+<div class="committee-box">
+  <h2>কমিটি সদস্য তালিকা (১–১০০)</h2>
+  <ul class="member-list" id="memberList"></ul>
 </div>
 
-<footer>
-  © <span id="yr"></span> সোনালী অতীত ক্লাব — নতুন কমিটি ২০২৫
-</footer>
+<footer>© <span id="yr"></span> সোনালী অতীত ক্লাব — নতুন কমিটি ২০২৫</footer>
 
 <script>
-const logo = "https://raw.githubusercontent.com/imranmahi529/sunali_otit_club/refs/heads/main/FB_IMG_1762583965385.jpg";
-const grid = document.getElementById("committeeGrid");
+const list = document.getElementById("memberList");
 
 for (let i = 1; i <= 100; i++) {
   const name = `সদস্য ${i}`;
-  const role = (i % 5 === 0) ? "দায়িত্বশীল সদস্য" : "সাধারণ সদস্য";
+  let role = "";
+  if (i === 1) role = "সভাপতি";
+  else if (i === 2) role = "সহ-সভাপতি (প্রথম)";
+  else if (i === 3) role = "সহ-সভাপতি (দ্বিতীয়)";
+  else if (i <= 10) role = "দায়িত্বশীল সদস্য";
+  else if (i <= 30) role = "সিনিয়র সদস্য";
+  else role = "সাধারণ সদস্য";
+
   const phone = "01710" + String(100000 + i);
-  const html = `
-    <div class="member-card">
-      <img src="${logo}" alt="${name}">
-      <h4>${i}. ${name}</h4>
-      <p>${role}<br>📞 ${phone}</p>
-    </div>
+  
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <div><span>${i}.</span> ${name} — ${role}</div>
+    <div>📞 ${phone}</div>
   `;
-  grid.insertAdjacentHTML("beforeend", html);
+
+  if (i <= 3) li.classList.add("leader");
+  else if (i <= 10) li.classList.add("executive");
+
+  list.appendChild(li);
 }
 
 document.getElementById("yr").textContent = new Date().getFullYear();
