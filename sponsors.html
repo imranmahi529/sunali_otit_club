@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>স্পনসর সিস্টেম | সোনালী অতীত ক্লাব</title>
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #0d0d0d, #1c1c1c);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.85);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar h1 {
+  font-size: 22px;
+  color: gold;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: gold;
+}
+
+/* ===== Header Section ===== */
+.header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #000, #333);
+  border-bottom: 2px solid gold;
+}
+.header h2 {
+  font-size: 36px;
+  color: gold;
+  text-shadow: 0 0 15px gold;
+}
+.header p {
+  color: #ccc;
+}
+
+/* ===== Sponsor Progress ===== */
+.progress {
+  width: 80%;
+  margin: 30px auto;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-bar {
+  width: 65%;
+  height: 20px;
+  background: gold;
+  animation: grow 2s ease-in-out;
+}
+@keyframes grow {
+  from { width: 0; }
+  to { width: 65%; }
+}
+
+/* ===== Sponsor Form ===== */
+.sponsor-form {
+  max-width: 500px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,215,0,0.3);
+}
+.sponsor-form h3 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 20px;
+}
+.sponsor-form input, .sponsor-form select, .sponsor-form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.sponsor-form input, .sponsor-form select {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.sponsor-form button {
+  background: gold;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.sponsor-form button:hover {
+  background: #ffd24d;
+}
+
+/* ===== Recent Sponsors ===== */
+.sponsor-list {
+  max-width: 1000px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.sponsor-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,215,0,0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.4s;
+}
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+.sponsor-card h4 { color: gold; }
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  border-top: 1px solid rgba(255,215,0,0.2);
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <h1>সোনালী অতীত ক্লাব</h1>
+  <div>
+    <a href="#">হোম</a>
+    <a href="#">কমিটি</a>
+    <a href="#">টিম</a>
+    <a href="#">স্পনসর</a>
+    <a href="#">লগইন</a>
+  </div>
+</div>
+
+<!-- Header -->
+<section class="header">
+  <h2>স্পনসর সিস্টেম ২০২৫</h2>
+  <p>আমাদের সঙ্গে যোগ দিন — ভবিষ্যৎ প্রজন্মের ক্রীড়াগন গঠনে সহযোগী হোন।</p>
+</section>
+
+<!-- Progress Bar -->
+<div class="progress">
+  <div class="progress-bar"></div>
+</div>
+
+<!-- Sponsor Form -->
+<div class="sponsor-form">
+  <h3>Become a Sponsor</h3>
+  <input type="text" placeholder="নাম লিখুন" required>
+  <input type="email" placeholder="ইমেইল লিখুন" required>
+  <input type="tel" placeholder="মোবাইল নাম্বার (বিকাশ/নগদ)">
+  <select>
+    <option>স্পনসর টাইপ সিলেক্ট করুন</option>
+    <option>🏆 Gold Sponsor</option>
+    <option>🥈 Silver Sponsor</option>
+    <option>🥉 Bronze Sponsor</option>
+  </select>
+  <button>পেমেন্ট করুন (বিকাশ/নগদ)</button>
+</div>
+
+<!-- Recent Sponsors -->
+<section class="sponsor-list">
+  <div class="sponsor-card"><h4>🏆 Royal Group</h4><p>Gold Sponsor</p></div>
+  <div class="sponsor-card"><h4>Sunny Electronics</h4><p>Silver Sponsor</p></div>
+  <div class="sponsor-card"><h4>Dream Café</h4><p>Bronze Sponsor</p></div>
+  <div class="sponsor-card"><h4>Imran Traders</h4><p>Supporter</p></div>
+</section>
+
+<footer>
+  <p>© ২০২৫ সোনালী অতীত ক্লাব | সকল অধিকার সংরক্ষিত</p>
+</footer>
+
+</body>
+</html>
